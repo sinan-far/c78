@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>
+        c78 project
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>
+        My Family Book
+    </h1>
+
+    <img id="family_member_image" src="">
+    <h4 id="family_member_name"></h4>
+    <button onclick="update();">Next</button>
+    <script>
+        var images = ["https://i.pinimg.com/736x/b9/38/42/b9384280454ebbdc3ee2cdce8544249c.jpg",
+            "https://qph.fs.quoracdn.net/main-qimg-c84107d24c706a7a8e519a293bb14deb.webp",
+            "https://i.pinimg.com/originals/e2/72/b9/e272b907ad544a765d01302777084e19.png",
+            "https://i.pinimg.com/originals/a7/a1/48/a7a148b8afde5732113fb9611e4d4ef9.jpg",
+            "https://www.anime-planet.com/images/characters/exs-uncle-158042.jpg",
+            "https://i0.wp.com/myotakuworld.com/wp-content/uploads/2021/03/Anime-Girl-Eye.jpg?fit=1280%2C720&ssl=1"
+        ];
+        var names = ["sinan", "mom", "dad", "cousin", "uncle", "aiza (other cousin)"];
+        var i = 0;
+
+        function update() {
+            i++;
+            var numbers_of_family_member_in_array = 5
+            if (i > numbers_of_family_member_in_array) {
+                i = 0;
+            }
+            var updatedImage = images[i];
+            var updatedName = names[i];
+            document.getElementById("family_member_image").src = updatedImage;
+            document.getElementById("family_member_name").innerHTML = updatedName;
+        }
+    </script>
+</body>
+
+</html>
